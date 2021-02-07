@@ -1,15 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Screen from './app/components/Screen';
-import Icon from './app/components/Icon';
-import ListItem from './app/components/ListItem';
+
+import LoginScreen from './app/screens/LoginScreen';
 
 export default function App() {
 	return (
 		<Screen>
-			<ListItem
-				title='My title'
-				ImageComponent={<Icon name='email' />}
-			/>
+			<LoginScreen />
 		</Screen>
 	);
 }
