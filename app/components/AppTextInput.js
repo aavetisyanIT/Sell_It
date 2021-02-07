@@ -1,7 +1,9 @@
 import React from 'react';
 import { TextInput, View, StyleSheet, Platform } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+
 import colors from '../config/colors';
+import defaultStyles from '../config/styles';
 
 export default function AppTextInput({ icon, ...otherProps }) {
 	return (
@@ -14,7 +16,7 @@ export default function AppTextInput({ icon, ...otherProps }) {
 					style={styles.icon}
 				/>
 			)}
-			<TextInput style={styles.textInput} {...otherProps} />
+			<TextInput style={defaultStyles.text} {...otherProps} />
 		</View>
 	);
 }
@@ -28,11 +30,6 @@ const styles = StyleSheet.create({
 		padding: 15,
 		marginVertical: 15,
 		alignItems: 'center',
-	},
-	textInput: {
-		fontSize: 18,
-		fontFamily: Platform.OS === 'android' ? 'Roboto' : 'Avenir',
-		color: colors.dark,
 	},
 	icon: {
 		marginRight: 10,
