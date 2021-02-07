@@ -8,7 +8,7 @@ import colors from '../config/colors';
 export default function ListItem({
 	title,
 	subTitle,
-	ImageComponent,
+	IconComponent,
 	image,
 	onPress,
 	renderRightActions,
@@ -20,7 +20,7 @@ export default function ListItem({
 				underlayColor={colors.light}
 			>
 				<View style={styles.container}>
-					{ImageComponent}
+					{IconComponent}
 					{image && (
 						<Image style={styles.image} source={image} />
 					)}
@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
 	container: {
 		flexDirection: 'row',
 		padding: 15,
+		backgroundColor: colors.white,
 	},
 	detailsContainer: {
 		marginLeft: 10,
