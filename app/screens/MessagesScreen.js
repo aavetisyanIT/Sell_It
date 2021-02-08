@@ -9,8 +9,8 @@ import ListItemDeleteAction from '../components/ListItemDeleteAction';
 const initialMessages = [
 	{
 		id: 1,
-		title: 'T1',
-		description: 'D1',
+		title: `Cillum commodo est pariatur Lorem ea duis id irure mollit magna consectetur eu. Nisi veniam amet cupidatat dolor voluptate sint. Nisi non tempor cillum consequat elit qui ullamco proident qui ea laboris dolor proident incididunt`,
+		description: `Cillum commodo est pariatur Lorem ea duis id irure mollit magna consectetur eu. Nisi veniam amet cupidatat dolor voluptate sint. Nisi non tempor cillum consequat elit qui ullamco proident qui ea laboris dolor proident incididunt`,
 		image: require('../assets/person.jpg'),
 	},
 	{
@@ -23,7 +23,7 @@ const initialMessages = [
 
 export default function MessagesScreen() {
 	const [messages, setMessages] = useState(initialMessages);
-	const [refresh, setRefresh] = useState(false);
+	const [refresh] = useState(false);
 	const handleDelete = item => {
 		//delete the message from messages
 		setMessages(messages.filter(m => m.id !== item.id));
